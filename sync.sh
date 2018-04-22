@@ -16,3 +16,5 @@ youtube:download:playlist swin https://www.youtube.com/playlist?list=PLOFLQd-wHz
 youtube:download:playlist kids https://www.youtube.com/playlist?list=PLOFLQd-wHzhdJW8Q8ru95N2a1GEclaLvN
 youtube:download:playlist musicool-share https://www.youtube.com/playlist?list=PLOFLQd-wHzhca8XhVROZNK7TMmIiLtQda
 youtube:download:playlist musicool-bb https://www.youtube.com/playlist?list=PLOFLQd-wHzhfp2Fm08yE2GE8Nn1r91XbN
+
+exit 0

@@ -1,6 +1,5 @@
-sudo: required
-env:
-  - OS_TYPE=centos OS_VERSION=7
+sudo: enabled
+os: centos7
 addons:
   ssh_known_hosts: 118.24.3.113
 before_install:
@@ -12,6 +11,6 @@ before_install:
 deploy:
   provider: script
   skip_cleanup: true
-  script: rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/ travis@118.24.3.113:~/travis
+  script: rsync -avz -e "ssh -p 60514" --progress --include='*.txt' --include='*/' --exclude='*' travis@118.24.3.113:~/youtube /tmp/you3
   on:
     branch: master

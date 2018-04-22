@@ -1,0 +1,17 @@
+sudo: required
+env:
+  - OS_TYPE=centos OS_VERSION=7
+addons:
+  ssh_known_hosts: 118.24.3.113
+before_install:
+- openssl aes-256-cbc -K $encrypted_31fd2bdd8224_key -iv $encrypted_31fd2bdd8224_iv
+  -in deploy_rsa.enc -out /tmp/deploy_rsa -d
+- eval "$(ssh-agent -s)"
+- chmod 600 /tmp/deploy_rsa
+- ssh-add /tmp/deploy_rsa
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/ travis@118.24.3.113:~/travis
+  on:
+    branch: master

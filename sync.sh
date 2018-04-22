@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 DOWNLOAD_DIR=/tmp/youtube
-
-rsync -avz -e "ssh -p 60514" --progress --include='*.txt' --include='*/' --exclude='*' travis@118.24.3.113:~/youtube /tmp/
+SSH_OPTS="-p 60514 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+rsync -avz -e "ssh ${SSH_OPTS}" --progress --include='*.txt' --include='*/' --exclude='*' travis@118.24.3.113:~/youtube /tmp/
 
 youtube:download:playlist() {
     local NAME=$1

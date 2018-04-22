@@ -5,6 +5,9 @@ Download and sync youtube playlist media file to your host
 1. fork me
 2. ssh login to your host, then
    ``` shell
+   travis env set HOST xx
+   travis env set USER xx
+
    ssh-keygen -t rsa -b 4096 -C 'build@travis-ci.org' -f ./deploy_rsa
    travis encrypt-file deploy_rsa --add
 

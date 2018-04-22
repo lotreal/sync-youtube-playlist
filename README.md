@@ -14,4 +14,4 @@ Download and sync youtube playlist media file to your host
    git add deploy_rsa.enc .travis.yml
    ```
 3. edit sync.sh
-4. open your [[https://travis-ci.org][travis]] switch
+4. open your [travis](https://travis-ci.org) switch

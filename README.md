@@ -3,8 +3,8 @@ Download and sync youtube playlist media file to your host
 
 ## Usage
 1. fork me
-2. ssh login to your host, then
-   ``` shell
+2. open your [travis](https://travis-ci.org) switch
+   ``` shell shell
    travis env set HOST xx
    travis env set USER xx
 
@@ -16,5 +16,5 @@ Download and sync youtube playlist media file to your host
    rm -f deploy_rsa deploy_rsa.pub
    git add deploy_rsa.enc .travis.yml
    ```
-3. edit sync.sh
-4. open your [travis](https://travis-ci.org) switch
+3. edit sync.sh, config your playlist url
+4. commit
